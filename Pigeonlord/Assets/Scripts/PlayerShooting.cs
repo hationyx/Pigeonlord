@@ -3,11 +3,13 @@ using System.Collections;
 
 public class PlayerShooting : MonoBehaviour
 {
-
+    // Bullet prefab to spawn
     public GameObject bulletPrefab;
 
+    // Pre-defined bullet speed, can be edited in the Unity Editor
     public float BulletSpeed = 300;
 
+    // Pre-defined time between shots, the player can roughly shoot 3 bullets per second
     public float TimeBetweenShots = 0.3f;
 
     private float timeStamp;
@@ -25,9 +27,11 @@ public class PlayerShooting : MonoBehaviour
         SpawnBullets();
 	}
 
+    // Method to spawn bullets
     void SpawnBullets()
     {
-
+        // Checks if Spacebar is down and enough time has passed 
+        // Since the last bullet was fired
         if (Input.GetButton("Jump") && (Time.time > timeStamp))
         {
             FireBullet();
@@ -35,7 +39,8 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-
+    // Method called when player presses the fire button
+    // Spawns the bullet and sets its velocity 
     void FireBullet()
     {
         GameObject Clone;    
