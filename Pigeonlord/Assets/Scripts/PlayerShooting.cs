@@ -14,7 +14,7 @@ public class PlayerShooting : MonoBehaviour
 
     private float timeStamp;
 
-    private Vector2 Force = new Vector2(600, 0);
+    private Vector2 Force = new Vector2(1000, 0);
     
 
 	// Use this for initialization
