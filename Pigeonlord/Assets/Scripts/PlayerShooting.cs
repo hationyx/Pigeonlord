@@ -13,6 +13,8 @@ public class PlayerShooting : MonoBehaviour
     public float TimeBetweenShots = 0.3f;
 
     private float timeStamp;
+
+    private Vector2 Force = new Vector2(600, 0);
     
 
 	// Use this for initialization
@@ -49,6 +51,13 @@ public class PlayerShooting : MonoBehaviour
         Clone = (Instantiate(bulletPrefab, transform.position, transform.rotation)) as GameObject;
         
         // Adds defined force to move the bullet in the correct direction
-        Clone.GetComponent<Rigidbody>().AddForce(BulletSpeed, 0, 0);
+        Clone.GetComponent<Rigidbody2D>().AddForce(Force,0);
+
+
+    }
+
+    void Powerups()
+    {
+        // TODO: Check and use shooting powerups
     }
 }
