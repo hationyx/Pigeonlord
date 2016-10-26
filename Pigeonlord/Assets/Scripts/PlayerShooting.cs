@@ -8,6 +8,11 @@ public class PlayerShooting : MonoBehaviour
 
     public float BulletSpeed = 300;
 
+    public float TimeBetweenShots = 0.3f;
+
+    private float timeStamp;
+    
+
 	// Use this for initialization
 	void Start ()
     {
@@ -22,24 +27,23 @@ public class PlayerShooting : MonoBehaviour
 
     void SpawnBullets()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (Input.GetButton("Jump") && (Time.time > timeStamp))
         {
             FireBullet();
+            timeStamp = Time.time + TimeBetweenShots;
         }
     }
 
+
     void FireBullet()
     {
-        GameObject Clone;
-        
+        GameObject Clone;    
 
+        // Creates the bullet and spawns it into the world
         Clone = (Instantiate(bulletPrefab, transform.position, transform.rotation)) as GameObject;
-
+        
+        // Adds defined force to move the bullet in the correct direction
         Clone.GetComponent<Rigidbody>().AddForce(BulletSpeed, 0, 0);
-    }
-
-    void DespawnBullets()
-    {
-
     }
 }
