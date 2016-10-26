@@ -14,7 +14,18 @@ public class PlayerMovement : MonoBehaviour {
     private float VerticalInputValue;
     private float HorizontalInputValue;
 
-	private void VerticalMovement()
+
+    private void PlayerMoveFunction()
+    {
+        Vector2 movement = transform.up * VerticalInputValue * PlayerSpeed * Time.deltaTime;
+        Vector2 movementH = transform.right * HorizontalInputValue * PlayerSpeed * Time.deltaTime;
+        PlayerRigidbody.MovePosition(PlayerRigidbody.position + movement + movementH);
+        
+
+    }
+
+	/*
+    private void VerticalMovement()
     {
         Vector2 movement = transform.up * VerticalInputValue * PlayerSpeed * Time.deltaTime;
         PlayerRigidbody.MovePosition(PlayerRigidbody.position + movement);
@@ -22,9 +33,10 @@ public class PlayerMovement : MonoBehaviour {
 
     private void HorizontalMovement()
     {
-
+        Vector2 movementH = transform.right * HorizontalInputValue * PlayerSpeed * Time.deltaTime;
+        PlayerRigidbody.MovePosition(PlayerRigidbody.position + movementH);
     }
-
+    */
 
     void Start ()
     {
@@ -37,7 +49,13 @@ public class PlayerMovement : MonoBehaviour {
         VerticalInputValue = Input.GetAxis("Vertical");
         HorizontalInputValue = Input.GetAxis("Horizontal");
 
-        VerticalMovement();
-        HorizontalMovement();
-	}
+       
+        //HorizontalMovement();
+        //VerticalMovement();
+    }
+
+    void FixedUpdate()
+    {
+        PlayerMoveFunction();
+    }
 }
