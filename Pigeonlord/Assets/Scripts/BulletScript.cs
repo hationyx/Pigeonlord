@@ -30,4 +30,14 @@ public class BulletScript : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    //OnTriggerEnter2D is called whenever this object overlaps with a trigger collider.
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //Check the provided Collider2D parameter other to see if it is tagged "Enemy", if it is...
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
 }

@@ -45,10 +45,13 @@ public class PlayerShooting : MonoBehaviour
     // Spawns the bullet and sets its velocity 
     void FireBullet()
     {
-        GameObject Clone;    
+        GameObject Clone;
 
         // Creates the bullet and spawns it into the world
-        Clone = (Instantiate(bulletPrefab, transform.position, transform.rotation)) as GameObject;
+
+        Vector3 pos = transform.position;
+        pos.x += 0.5f;
+        Clone = (Instantiate(bulletPrefab, pos, transform.rotation)) as GameObject;
         
         // Adds defined force to move the bullet in the correct direction
         Clone.GetComponent<Rigidbody2D>().AddForce(Force,0);
