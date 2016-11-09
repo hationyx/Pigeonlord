@@ -50,7 +50,7 @@ public class PlayerShooting : MonoBehaviour
         // Creates the bullet and spawns it into the world
 
         Vector3 pos = transform.position;
-        pos.x += 0.5f;
+        pos.x += 1f;
         Clone = (Instantiate(bulletPrefab, pos, transform.rotation)) as GameObject;
         
         // Adds defined force to move the bullet in the correct direction

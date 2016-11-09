@@ -40,8 +40,8 @@ public class PlayerMovement : MonoBehaviour {
     private void Boundaries()
     {
         Vector2 Pos = transform.position;
-        Pos.x = Mathf.Clamp(Pos.x + HorizontalInputValue, -7.7f, -5.5f);
-        Pos.y = Mathf.Clamp(Pos.y + VerticalInputValue, -3.6f, 4.1f);
+        Pos.x = Mathf.Clamp(Pos.x + HorizontalInputValue, -9.4f, -5.5f);
+        Pos.y = Mathf.Clamp(Pos.y + VerticalInputValue, -4.2f, 4.1f);
         transform.position = Pos;
     }
 

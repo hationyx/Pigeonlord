@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemySpawn.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="85" Column="6" />
+      <File FileName="Assets\Scripts\EnemyMovement.cs" Line="31" Column="3" />
+      <File FileName="Assets\Scripts\PlayerShooting.cs" Line="40" Column="54" />
+      <File FileName="Assets\Scripts\PickupMovement.cs" Line="29" Column="24" />
+      <File FileName="Assets\Scripts\Rotator.cs" Line="11" Column="40" />
+      <File FileName="Assets\Scripts\EnemySpawn.cs" Line="7" Column="31" />
+      <File FileName="Assets\Scripts\PlayerHP.cs" Line="24" Column="2" />
+      <File FileName="Assets\Scripts\BulletScript.cs" Line="31" Column="10" />
+      <File FileName="Assets\Scripts\PickupSpawn.cs" Line="10" Column="32" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
