@@ -9,10 +9,10 @@ public class PickupMovement : MonoBehaviour {
 
 		PickupRigidbody = GetComponent<Rigidbody2D>();
 	}
-
-	// Update is called once per frame
+		
 	void Update () {
 		PickupMoveFunction();
+	
 	}
 
 	private void PickupMoveFunction ()
@@ -23,10 +23,19 @@ public class PickupMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		//Check the provided Collider2D parameter other to see if it is tagged "Respawn", if it is...
+		//destroys the objects if the player doesn't pick them up
 		if (other.gameObject.CompareTag("Despawn"))
 		{
 			Destroy(gameObject);
 		}
+
+		if (other.gameObject.CompareTag("EndDespawn"))
+		{
+			Destroy(gameObject);
+		}
+
+
 	}
+
+
 }

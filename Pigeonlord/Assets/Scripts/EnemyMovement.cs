@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyMovement : MonoBehaviour {
 
 	private Rigidbody2D EnemyRigidbody;
-	public float enemySpeed = 40f;
+	public float enemySpeed = 10f;
 	void Start () {
 	
 		EnemyRigidbody = GetComponent<Rigidbody2D>();
@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour {
 		EnemyMoveFunction();
 	}
 
+	//standard enemy movement, they just move sideways at a certain speed
 	private void EnemyMoveFunction ()
 	{
 		Vector2 movement = transform.right * enemySpeed * Time.deltaTime;
@@ -23,10 +24,19 @@ public class EnemyMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		//Check the provided Collider2D parameter other to see if it is tagged "Respawn", if it is...
+		//if they hit the top or bottom despawn they just get destroyed, if they hit the end one they got past the player so the player loses points
 		if (other.gameObject.CompareTag("Despawn"))
 		{
 			Destroy(gameObject);
 		}
+
+		if (other.gameObject.CompareTag("EndDespawn"))
+		{
+			ScoreManager.score = ScoreManager.score -10;
+			Destroy(gameObject);
+		}
+
 	}
+
+
 }

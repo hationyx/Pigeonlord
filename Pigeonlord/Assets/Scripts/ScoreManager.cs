@@ -5,22 +5,27 @@ using System.Collections;
 public class ScoreManager : MonoBehaviour
 {
     public static int score;
+    public Text scoreText;
 
-    Text text;
 
-	// Use this for initialization
+	//finds the text object and updates the score every frame, static int so other scripts can easily access it
+	void Awake ()
+	{
+		scoreText = GameObject.Find ("Canvas/Score: ").GetComponent<Text> ();
+	}
+
 	void Start ()
     {
-        text = GetComponent<Text>();
-
-        // Reset the score
         score = 0;
 	}
 	
-	// Update is called once per frame
+
 	void Update ()
     {
         // Set the displayed text to be the word "Score" followed by the score value
-        text.text = "Score: " + score;
+        scoreText.text = "Score: " + score;
+
 	}
+
+
 }
