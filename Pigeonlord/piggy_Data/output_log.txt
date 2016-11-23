@@ -14,14 +14,14 @@ Platform assembly: C:\Users\hayden.baker\Documents\Pigeonlord\piggy_Data\Managed
 Loading C:\Users\hayden.baker\Documents\Pigeonlord\piggy_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\hayden.baker\Documents\Pigeonlord\piggy_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\hayden.baker\Documents\Pigeonlord\piggy_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.208 seconds
+- Completed reload, in  0.195 seconds
 Platform assembly: C:\Users\hayden.baker\Documents\Pigeonlord\piggy_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\hayden.baker\Documents\Pigeonlord\piggy_Data\Managed\System.dll (this message is harmless)
 desktop: 1680x1050 59Hz; virtual: 1680x1050 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.542177 ms
+UnloadTime: 0.562336 ms
 Our current directory is C:/Users/hayden.baker/Documents/Pigeonlord/piggy_Data
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
@@ -30,14 +30,6 @@ The file highscores.txt does not exist. No scores will be loaded.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-Score of 115 entered into high scores at position 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-High scores written to highscores.txt
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2dc -> priority: 1 
-  Thread -> id: 1c9c -> priority: 1 
+  Thread -> id: 9b0 -> priority: 1 
+  Thread -> id: 1fcc -> priority: 1 
