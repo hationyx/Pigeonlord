@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // The forces that control Pigeon X
     // Speed determines the speed of our pigeon
-    public float PlayerSpeed = 12f;
+    public float PlayerSpeed = 0.002f;
     //We've decided to use a Rigidbody to control our 'characters'
 	private Rigidbody2D PlayerRigidbody;
 
@@ -29,10 +29,10 @@ public class PlayerMovement : MonoBehaviour {
 
 
     //This function allows the player to move around in game space
-    private void PlayerMoveFunction()
+    public void PlayerMoveFunction()
     {
-        Vector2 movement = transform.up * VerticalInputValue * PlayerSpeed * Time.deltaTime;
-        Vector2 movementH = transform.right * HorizontalInputValue * PlayerSpeed * Time.deltaTime;
+        Vector2 movement = (transform.up * VerticalInputValue  * Time.deltaTime) * PlayerSpeed;
+        Vector2 movementH = (transform.right * HorizontalInputValue  * Time.deltaTime) * PlayerSpeed;
         PlayerRigidbody.MovePosition(PlayerRigidbody.position + movement + movementH);
 
       
@@ -68,11 +68,12 @@ public class PlayerMovement : MonoBehaviour {
         VerticalInputValue = Input.GetAxis("Vertical");
         HorizontalInputValue = Input.GetAxis("Horizontal");
         Boundaries();
+        PlayerMoveFunction();
     }
 
     void FixedUpdate()
     {
-        PlayerMoveFunction();
+        
     }
 
     //OnTriggerEnter2D is called whenever this object overlaps with a trigger collider.
